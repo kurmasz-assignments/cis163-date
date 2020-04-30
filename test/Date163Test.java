@@ -24,7 +24,7 @@ public class Date163Test {
 
   @Test
   public void isLeapYear() {
-    assertFalse(Date163.isLeapYear(1956));
+    assertTrue(Date163.isLeapYear(1956));
   }
 
   // JUnit5 adds some additional features that let you define a
@@ -60,7 +60,7 @@ public class Date163Test {
   @Test
   @DisplayName(".daysInYear recognizes 'regular' year")
   public void daysInYearRegularStatic() {
-    assertEquals(365, Date163.daysInYear(1972));
+    assertEquals(365, Date163.daysInYear(1982));
   }
 
   /*********************************************************************************
