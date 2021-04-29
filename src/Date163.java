@@ -137,7 +137,7 @@ public class Date163 {
     * 
     * @param other the other {@code SimpleDate}
     * @return {@code true} if the two objects return the same date, {@code false}
-    *         otherwise.
+    *         otherwize.
     */
 
    public boolean equals(Date163 other) {
@@ -166,13 +166,13 @@ public class Date163 {
 
    /**
     * Return a value < 0 if this date comes before {@code other}. Return 0 if the
-    * dates are equal Return a value > 0 if this date comes after {@code other}
+    * dates are equal Return a value > 0 if this date comes after {@code oter}
     * 
     * @param other
     * @return an integer representing which date comes first.
     */
    public int compareTo(Date163 other) {
-
+ 
       int answer = 0;
 
       // 
@@ -311,4 +311,4 @@ public class Date163 {
 
    // 
 
-} // end Date163
+} // end Date163 afzqx
