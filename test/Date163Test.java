@@ -86,7 +86,7 @@ public class Date163Test {
   @ParameterizedTest
   @DisplayName("#constructor(int, int, int) sets month, day, and year correctly")
   @CsvSource({ "1,1,2020", "2,15,2020", "3,13,2020" })
-  public void constructorWorks(String date) {
+  public void constructorWorks(int month, int day, int year) {
     Date163 d = new Date163(month, day, year);
     assertEquals(month, d.getMonth());
     assertEquals(day, d.getDay());
