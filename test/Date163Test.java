@@ -72,15 +72,8 @@ public class Date163Test {
   // Here is a cool way to pass complex data to a test
   @ParameterizedTest
   @DisplayName(".isValid recognizes day too large")
-
-  // TODO:  Get rid of the split below and use CsvSource properly
-  @CsvSource({ "1/32/2020", "2/30/2020", "3/32/2020" })
-  public void recognizesDayTooLarge(String date) {
-    String[] parts = date.split("/");
-    int month = Integer.parseInt(parts[0]);
-    int day = Integer.parseInt(parts[1]);
-    int year = Integer.parseInt(parts[2]);
-
+  @CsvSource({"1, 32, 2020", "2, 30,  2020", "3, 32, 2020" })
+  public void recognizesDayTooLarge(int month, int day, int year) {
     assertFalse(Date163.isValidDate(month, day, year));
   }
 
