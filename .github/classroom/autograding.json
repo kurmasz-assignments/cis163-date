@@ -1,0 +1,24 @@
+{
+  "tests": [
+    {
+      "name": "Student tests",
+      "setup": "javac -d . -cp lib/junit-platform-console-standalone-1.6.2.jar src/*.java test/*.java",
+      "run": "java -jar lib/junit-platform-console-standalone-1.6.2.jar -cp instructorTests.jar:. -c InstructorS21Test",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 10
+    },
+    {
+      "name": "Instructor Tests",
+      "setup": "javac -d . -cp lib/junit-platform-console-standalone-1.6.2.jar src/*.java test/*.java",
+      "run": "java -jar lib/junit-platform-console-standalone-1.6.2.jar -cp instructorTests.jar:. -c InstructorS21Test -T twoDigitYear",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 60
+    }
+  ]
+}

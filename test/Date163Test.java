@@ -72,7 +72,7 @@ public class Date163Test {
   // Here is a cool way to pass complex data to a test
   @ParameterizedTest
   @DisplayName(".isValid recognizes day too large")
-  @CsvSource({"1, 32, 2020", "2, 30,  2020", "3, 32, 2020" })
+  @CsvSource({ "1, 32, 2020", "2, 30, 2020", "3, 32, 2020" })
   public void recognizesDayTooLarge(int month, int day, int year) {
     assertFalse(Date163.isValidDate(month, day, year));
   }
@@ -85,15 +85,8 @@ public class Date163Test {
 
   @ParameterizedTest
   @DisplayName("#constructor(int, int, int) sets month, day, and year correctly")
-  @CsvSource({ "1/1/2020", "2/15/2020", "3/13/2020" })
+  @CsvSource({ "1,1,2020", "2,15,2020", "3,13,2020" })
   public void constructorWorks(String date) {
-
-    // Move this code to a helper method if you are use it in many methods.
-    String[] parts = date.split("/");
-    int month = Integer.parseInt(parts[0]);
-    int day = Integer.parseInt(parts[1]);
-    int year = Integer.parseInt(parts[2]);
-
     Date163 d = new Date163(month, day, year);
     assertEquals(month, d.getMonth());
     assertEquals(day, d.getDay());
